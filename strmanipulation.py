@@ -1,15 +1,21 @@
-text = 'Hello world'
-#print(text) #just prints a variable
-#print(text[8]) prints a letter whis on position 8
-#print(len(text)) prints lenght of the string
-#print(type(text))
-text = 'Hello World'
+text = 'Hello Zaira'
 shift = 3
-alphabet = 'abcdefghijklmnopqrstuvwxyz'
-encrypted_text = ''
+def caesar():
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    encrypted_text = ''
 
-for char in text.lower():
-    index = alphabet.find(char)    
-    new_index = index + shift
-    encrypted_text = alphabet[new_index]
-    print('char:', char, 'encrypted_text:', encrypted_text)
+    for char in text.lower():
+        if char == ' ':
+            encrypted_text += char
+        else:
+            index = alphabet.find(char)
+            new_index = (index + shift) % len(alphabet)
+    encrypted_text += alphabet[new_index]
+    print('plain text:', text)
+    print('encrypted text:', encrypted_text)
+
+
+def myyy():
+    print(shift)
+    print(f'Hello^ my name is {shift}')
+myyy()
